@@ -79,28 +79,39 @@ a:hover {
 }
 
 /* Header */
+header #menu-toggle{
+    background-color: #f40612;
+    width: auto;
+    padding: 10px;
+    position: relative;
+}
 header {
     padding: 20px;
-    background-color: #141414;
+    background-color: #090909;
     text-align: center;
+    position: relative;
 }
 
+/* Buscador */
 input#search {
     width: 90%;
     max-width: 500px;
     padding: 10px;
-    background-color: #333;
-    border: 1px solid #444;
+    background-color: #131413;
+    border: 1px solid #ea0909;
     color: #fff;
     border-radius: 5px;
 }
 
 /* Menú de navegación */
+nav {
+    background-color: #141414;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #141414;
     padding: 10px 0;
     gap: 15px;
 }
@@ -176,7 +187,7 @@ footer button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(7, 7, 7, 0.8);
     justify-content: center;
     align-items: center;
 }
@@ -200,53 +211,47 @@ footer button:hover {
 }
 
 /* RESPONSIVE DESIGN */
-
-/* Tablets */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #movies-container {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-
-    footer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer button {
-        width: 80%;
-        margin-bottom: 10px;
-    }
+/* Botón menú hamburguesa */
+#menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
-/* Móviles */
-@media (max-width: 480px) {
-    .login-container, .register-container {
-        padding: 10px;
+/* Modo móvil */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
     }
 
-    input, button {
-        max-width: 100%;
-    }
-
-    #movies-container {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        gap: 10px;
-    }
-
-    .movie h3 {
-        font-size: 14px;
-    }
-
-    footer {
+    nav ul {
+        display: none;
         flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #131212;
+        padding: 10px;
+        text-align: center;
     }
 
-    footer button {
-        width: 100%;
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+
+    /* Evitar que el footer fije su posición en móviles */
+    footer {
+        position: relative;
     }
 }

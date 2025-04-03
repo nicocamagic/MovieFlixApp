@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <button id="menu-toggle">&#9776;</button> <!-- Icono de menú ☰ -->
+        <nav id="menu">
+            <ul>
+                <li><button id="menu-inicio">Inicio</button></li>
+                <li><button id="menu-buscar">Buscar</button></li>
+                <li><button id="menu-favoritos">Favoritos</button></li>
+                <li><button id="menu-perfil">Perfil</button></li>
+                <li><button><a href="index.html">Cerrar Sesion</a></button></li>
+            </ul>
+        </nav>
+    </header>
         <header>
             <input type="text" id="search" placeholder="Buscar película...">
         </header>
@@ -32,15 +44,14 @@
     </div>
     
 
-    <footer>
-        <button id="menu-inicio">Inicio</button>
-        <button id="menu-buscar">Buscar</button>
-        <button id="menu-favoritos">Favoritos</button>
-        <button id="menu-perfil">Perfil</button>
-        <button><a href="index.html">Cerrar Sesion</a></button>
-    </footer>
+    <footer></footer>
     
 
     <script src="main.js"></script>
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.querySelector("nav ul").classList.toggle("show");
+    });
+    </script>
 </body>
 </html>
