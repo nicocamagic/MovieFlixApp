@@ -80,10 +80,10 @@ a:hover {
 
 /* Header */
 header #menu-toggle{
-    background-color: #f40612;
+    background: #f40612;
     width: auto;
-    padding: 10px;
-    position: relative;
+    padding: 1%;
+    position: fixed;
 }
 header {
     padding: 20px;
