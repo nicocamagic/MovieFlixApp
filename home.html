@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieApp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <header>
+            <input type="text" id="search" placeholder="Buscar película...">
+        </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="tab" data-category="popular">Populares</a></li>
+            <li><a href="#" class="tab" data-category="trending">Tendencias</a></li>
+            <li><a href="#" class="tab" data-category="top_rated">Mejor Valoradas</a></li>
+            <li><a href="#" class="tab" data-category="action">Acción</a></li>
+            <li><a href="#" class="tab" data-category="comedy">Comedia</a></li>
+            <li><a href="#" class="tab" data-category="horror">Terror</a></li>
+        </ul>
+    </nav>
+
+    <main id="movies-container"></main>
+
+    <div id="trailer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTrailer()">&times;</span>
+            <iframe id="trailer-video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+
+    <footer>
+        <button id="menu-inicio">Inicio</button>
+        <button id="menu-buscar">Buscar</button>
+        <button id="menu-favoritos">Favoritos</button>
+        <button id="menu-perfil">Perfil</button>
+        <button><a href="index.html">Cerrar Sesion</a></button>
+    </footer>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
